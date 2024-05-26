@@ -163,9 +163,8 @@
                 </div>
             </div>
         </section> -->
-        
 
-        <!-- <section class="section">
+        <section class="section">
             <div class="container is-max-desktop is-mobile">
                 <div class="columns is-centered">
                     <div class="column is-four-fifths">
@@ -187,57 +186,12 @@
                     </div>
                 </div>
             </div>
-        </section> -->
-        
-        <section class="section">
-            <div class="container is-max-desktop is-mobile">
-                <div class="is-centered" style="margin-bottom: 3rem;">
-                    <h2 class="title is-3">Demo Video</h2>
-                </div>
-                <div class="item item-playroom">
-                    <video poster="" id="playroom" controls muted loop playsinline height="100%">
-                        <source src="./static/videos/demo_2.35_small.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <!-- <iframe width="420" height="315"
-                src="https://youtu.be/i2UiF7ZFnjY">
-                </iframe> -->
-                <!-- <div class="item item-playroom">
-                    <video poster="" id="playroom" autoplay controls muted loop playsinline height="100%">
-                        <source src="https://youtu.be/i2UiF7ZFnjY" type="video/mp4">
-                    </video>
-                </div> -->
-
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="container is-max-desktop is-mobile">
-                <div class="is-centered" style="margin-bottom: 3rem;">
-                    <h2 class="title is-3">Abstract</h2>
-                </div>
-                <p>
-                    Neural Radiance Fields (NeRFs) have demonstrated remarkable proficiency in synthesizing photorealistic images of large-scale scenes. 
-                    However, they are often plagued by a loss of fine details and long rendering durations.
-                    3D Gaussian Splatting has recently been introduced as a potent alternative, achieving both high-fidelity visual results and accelerated rendering performance. 
-                    Nonetheless, scaling 3D Gaussian Splatting is fraught with challenges.
-                    Specifically, large-scale scenes grapples with the integration of objects across multiple scales and disparate viewpoints, which often leads to compromised efficacy as the Gaussians need to balance between detail levels. 
-                    Furthermore, the generation of initialization points via COLMAP from large-scale dataset is both computationally demanding and prone to incomplete reconstructions.
-                    To address these challenges, we present <strong>Py</strong>ramidal 3D <strong>G</strong>aussian <strong>S</strong>platting (<strong>PyGS</strong>) with NeRF Initialization. 
-                    Our approach represent the scene with a hierarchical assembly of Gaussians arranged in a pyramidal fashion. 
-                    The top level of the pyramid is composed of a few large Gaussians, while each subsequent layer accommodates a denser collection of smaller Gaussians. 
-                    We effectively initialize these pyramidal Gaussians through sampling a rapidly trained grid-based NeRF at various frequencies.
-                    We group these pyramidal Gaussians into clusters and use a compact weighting network to dynamically determine the influence of each pyramid level of each cluster considering camera viewpoint during rendering.
-                    Our method achieves a significant performance leap across multiple large-scale datasets and attains a rendering time that is over 400 times faster than current state-of-the-art approaches.
-                </p>
-                </ul>
-            </div>
         </section>
         
         <section class="section">
             <div class="container is-max-desktop is-mobile">
-                <div class="is-centered" style="margin-bottom: 3rem;">
-                    <h2 class="title is-3">Method Overview</h2>
+                <div class="is-centered" style="margin-bottom: 2rem;">
+                    <h2 class="title is-3" style="text-align: center;">Method Overview</h2>
                 </div>
                 <p>
                     PyGS parameterizes the scene using a hierarchical structure of 3D Gaussians, organized into pyramid levels that represent different levels of details.
@@ -253,10 +207,42 @@
                 </p>
                 </ul>
                 <div class="is-centered ">
-                    <img src="static/img/pipeline.svg">
+                    <img src="static/img/pipeline.svg" class="center">
                 </div>
             </div>
         </section>
+
+        <section class="section">
+            <div class="container is-max-desktop is-mobile">
+                
+                <div class="is-centered" style="margin-bottom: 1rem;">
+                    <h2 class="title is-3" style="text-align: center;">Results</h2>
+                </div>
+
+                <div class="is-centered ">
+                    <figure>
+                        <img src="static/img/mill19.png" style="width: 75%;"  class="center">
+                        <figcaption>Results on Mill19 and Urbanscene dataset.</figcaption>
+                    </figure>
+                </div>
+
+                <div class="is-centered ">
+                    <figure>
+                        <img src="static/img/matrix_city.png" style="width: 75%;"  class="center">
+                        <figcaption>Results on MatrixCity dataset.</figcaption>
+                    </figure>
+                </div>
+
+                <div class="is-centered ">
+                    <figure>
+                        <img src="static/img/bungeenerf.png" style="width: 70%;"  class="center">
+                        <figcaption>Results on BungeeNeRF dataset.</figcaption>
+                    </figure>
+                </div>
+
+            </div>
+        </section>
+       
 <!-- 
         <section class="section">
             <div class="container is-max-desktop is-mobile">
@@ -291,196 +277,14 @@
         </section> -->
 
 
-        <!-- <section class="section">
-            <div class="container is-max-desktop is-mobile">
-                <div class="is-centered" style="margin-bottom: 3rem;">
-                    <h2 class="title is-3">Interactive Web Demo</h2>
-                </div>
-                <div class="columns is-centered has-text-centered is-multiline" id="demos">
-                    <div class="column demo-card">
-                        <div class="card">
-                            <a target="_blank"
-                                href="https://keksboter.github.io/web-splat/?file=./scenes/bicycle/point_cloud/iteration_35000/point_cloud.npz&scene=./scenes/bicycle/cameras.json">
-                                <div class="card-image">
-                                    <figure class="image">
-                                        <img src="static/img/samples/bicycle/ours/00000.png" alt="Placeholder image">
-                                    </figure>
-                                </div>
-                                <div class="card-content has-text-left">
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <div class="title is-4">Bicycle</div>
-                                            <div class="subtitle is-6">Mip-NeRF360</div>
-                                        </div>
-                                        <div class="media-center" style="width: 100%;">
-                                        </div>
-                                        <div class="media-right">
-                                            <span class="tag">
-                                                47 MB
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="column demo-card">
-                        <div class="card">
-                            <a target="_blank"
-                                href="https://keksboter.github.io/web-splat/?file=./scenes/garden/point_cloud/iteration_35000/point_cloud.npz&scene=./scenes/garden/cameras.json">
-                                <div class="card-image">
-                                    <figure class="image">
-                                        <img src="static/img/samples/garden/ours/00000.png" alt="Placeholder image">
-                                    </figure>
-                                </div>
-                                <div class="card-content has-text-left">
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <div class="title is-4">Garden</div>
-                                            <div class="subtitle is-6">Mip-NeRF360</div>
-                                        </div>
-                                        <div class="media-center" style="width: 100%;">
-                                        </div>
-                                        <div class="media-right">
-                                            <span class="tag">
-                                                47 MB
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="column demo-card">
-                        <div class="card">
-                            <a target="_blank"
-                                href="https://keksboter.github.io/web-splat/?file=./scenes/truck/point_cloud/iteration_35000/point_cloud.npz&scene=./scenes/truck/cameras.json">
-                                <div class="card-image">
-                                    <figure class="image">
-                                        <img src="static/img/samples/truck/ours/00000.png" alt="Placeholder image">
-                                    </figure>
-                                </div>
-                                <div class="card-content has-text-left">
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <div class="title is-4">Truck</div>
-                                            <div class="subtitle is-6">Tanks &amp; Temples</div>
-                                        </div>
-                                        <div class="media-center" style="width: 100%;">
-                                        </div>
-                                        <div class="media-right">
-                                            <span class="tag">
-                                                21 MB
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="column demo-card">
-                        <div class="card">
-                            <a target="_blank"
-                                href="https://keksboter.github.io/web-splat/?file=./scenes/playroom/point_cloud/iteration_35000/point_cloud.npz&scene=./scenes/playroom/cameras.json">
-                                <div class="card-image">
-                                    <figure class="image">
-                                        <img src="static/img/samples/playroom/ours/00000.png" alt="Placeholder image">
-                                    </figure>
-                                </div>
-                                <div class="card-content has-text-left">
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <div class="title is-4">Playroom</div>
-                                            <div class="subtitle is-6">Deep Blending</div>
-                                        </div>
-                                        <div class="media-center" style="width: 100%;">
-                                        </div>
-                                        <div class="media-right">
-                                            <span class="tag">
-                                                22 MB
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="column demo-card">
-                        <div class="card">
-                            <a target="_blank"
-                                href="https://keksboter.github.io/web-splat/?file=./scenes/lego/point_cloud/iteration_35000/point_cloud.npz&scene=./scenes/lego/cameras.json">
-                                <div class="card-image">
-                                    <figure class="image">
-                                        <img src="static/img/samples/lego/ours/00000.png" alt="Placeholder image">
-                                    </figure>
-                                </div>
-                                <div class="card-content has-text-left">
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <div class="title is-4">Lego</div>
-                                            <div class="subtitle is-6">Synthetic-NeRF</div>
-                                        </div>
-                                        <div class="media-center" style="width: 100%;">
-                                        </div>
-                                        <div class="media-right">
-                                            <span class="tag">
-                                                4 MB
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="column demo-card">
-                        <div class="card">
-                            <a target="_blank"
-                                href="https://keksboter.github.io/web-splat/?file=./scenes/ship/point_cloud/iteration_35000/point_cloud.npz&scene=./scenes/ship/cameras.json">
-                                <div class="card-image">
-                                    <figure class="image">
-                                        <img src="static/img/samples/ship/ours/00000.png" alt="Placeholder image">
-                                    </figure>
-                                </div>
-                                <div class="card-content has-text-left">
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <div class="title is-4">Ship</div>
-                                            <div class="subtitle is-6">Synthetic-NeRF</div>
-                                        </div>
-                                        <div class="media-center" style="width: 100%;">
-                                        </div>
-                                        <div class="media-right">
-                                            <span class="tag">
-                                                5 MB
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="is-centered">
-                        <a href="https://keksboter.github.io/web-splat/demo.html">
-                            <p style="margin: 1rem;">All scenes used in the paper.</p>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </section> -->
-
-
-        <!-- <section class="section">
+        <section class="section">
             <div class="container is-max-desktop">
 
                 <div class="columns is-centered has-text-centered">
                     <h2 class="title is-3">Examples</h2>
                 </div>
                 <div class="column">
-                    <p>Image comparisons for the baseline and compressed reconstruction. All images are taken from the
-                        test
-                        set.</p>
+                    <p>Image comparisons for the baseline and compressed reconstruction. All images are taken from the test set.</p>
                 </div>
                 <div class="columns is-centered has-text-centered">
                     <div class="column">
@@ -488,24 +292,24 @@
                             <div class="bal-container-small image-compare">
 
                                 <div class="bal-after">
-                                    <img src="static/img/samples/bicycle/ours/00000.png">
+                                    <img src="static/img/examples/building_pygs.svg">
                                     <div class="bal-afterPosition afterLabel" style="z-index:1;">
                                         Ours
                                     </div>
-                                    <div class="bal-afterPosition afterSize" style="z-index:1;">
+                                    <!-- <div class="bal-afterPosition afterSize" style="z-index:1;">
                                         47 MB
-                                    </div>
+                                    </div> -->
                                 </div>
 
                                 <div class="bal-before" style="width:96.4968152866242%;">
                                     <div class="bal-before-inset" style="width: 539px;">
-                                        <img src="static/img/samples/bicycle/baseline/00000.png">
+                                        <img src="static/img/examples/building_3dgs.svg">
                                         <div class="bal-beforePosition beforeLabel">
                                             3DGS
                                         </div>
-                                        <div class="bal-beforePosition beforeSize">
+                                        <!-- <div class="bal-beforePosition beforeSize">
                                             1.5 GB
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
 
@@ -519,23 +323,48 @@
                             <div class="bal-container-small image-compare">
 
                                 <div class="bal-after">
-                                    <img src="static/img/samples/garden/ours/00000.png">
+                                    <img src="static/img/examples/sci-art_pygs.svg">
                                     <div class="bal-afterPosition afterLabel" style="z-index:1;">
                                         Ours
                                     </div>
-                                    <div class="bal-afterPosition afterSize" style="z-index:1;">
+                                    <!-- <div class="bal-afterPosition afterSize" style="z-index:1;">
                                         47 MB
+                                    </div> -->
+                                </div>
+
+                                <div class="bal-before" style="width:96.4968152866242%;">
+                                    <div class="bal-before-inset" style="width: 539px;">
+                                        <img src="static/img/examples/sciart_meganerf.png">
+                                        <div class="bal-beforePosition beforeLabel">
+                                            3DGS
+                                        </div>
+                                        <!-- <div class="bal-beforePosition beforeSize">
+                                            1.4 GB
+                                        </div> -->
+                                    </div>
+                                </div>
+
+                                <div class="bal-handle" style="left:96.4968152866242%;">
+                                    <span class=" handle-left-arrow"></span>
+                                    <span class="handle-right-arrow"></span>
+                                </div>
+                            </div>
+
+                            
+                            <div class="bal-container-small image-compare">
+
+                                <div class="bal-after">
+                                    <img src="static/img/examples/matrixcity_pygs.svg">
+                                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                                        Ours
                                     </div>
                                 </div>
 
                                 <div class="bal-before" style="width:96.4968152866242%;">
                                     <div class="bal-before-inset" style="width: 539px;">
-                                        <img src="static/img/samples/garden/baseline/00000.png">
+                                        <img src="static/img/examples/matrixcity_gridnerf.svg">
                                         <div class="bal-beforePosition beforeLabel">
-                                            3DGS
-                                        </div>
-                                        <div class="bal-beforePosition beforeSize">
-                                            1.4 GB
+                                            GridNeRF
                                         </div>
                                     </div>
                                 </div>
@@ -544,8 +373,8 @@
                                     <span class=" handle-left-arrow"></span>
                                     <span class="handle-right-arrow"></span>
                                 </div>
-
                             </div>
+
                         </div>
                     </div>
                     <div class="column">
@@ -553,24 +382,55 @@
                             <div class="bal-container-small image-compare">
 
                                 <div class="bal-after">
-                                    <img src="static/img/samples/truck/ours/00000.png">
+                                    <img src="static/img/examples/residence_pygs.svg">
                                     <div class="bal-afterPosition afterLabel" style="z-index:1;">
                                         Ours
                                     </div>
-                                    <div class="bal-afterPosition afterSize" style="z-index:1;">
+                                    <!-- <div class="bal-afterPosition afterSize" style="z-index:1;">
                                         21 MB
-                                    </div>
+                                    </div> -->
                                 </div>
 
                                 <div class="bal-before" style="width:96.4968152866242%;">
                                     <div class="bal-before-inset" style="width: 539px;">
-                                        <img src="static/img/samples/truck/baseline/00000.png">
+                                        <img src="static/img/examples/residence_3dgs.svg">
                                         <div class="bal-beforePosition beforeLabel">
                                             3DGS
                                         </div>
-                                        <div class="bal-beforePosition beforeSize">
+                                        <!-- <div class="bal-beforePosition beforeSize">
                                             600 MB
+                                        </div> -->
+                                    </div>
+                                </div>
+
+                                <div class="bal-handle" style="left:96.4968152866242%;">
+                                    <span class="handle-left-arrow"></span>
+                                    <span class="handle-right-arrow"></span>
+                                </div>
+
+                            </div>
+
+                            <div class="bal-container-small image-compare">
+
+                                <div class="bal-after">
+                                    <img src="static/img/examples/rubble_pygs.svg">
+                                    <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                                        Ours
+                                    </div>
+                                    <!-- <div class="bal-afterPosition afterSize" style="z-index:1;">
+                                        22 MB
+                                    </div> -->
+                                </div>
+
+                                <div class="bal-before" style="width:96.4968152866242%;">
+                                    <div class="bal-before-inset" style="width: 539px;">
+                                        <img src="static/img/examples/rubble_switchnerf.svg">
+                                        <div class="bal-beforePosition beforeLabel">
+                                            SwitchNeRF
                                         </div>
+                                        <!-- <div class="bal-beforePosition beforeSize">
+                                            602 MB
+                                        </div> -->
                                     </div>
                                 </div>
 
@@ -584,24 +444,24 @@
                             <div class="bal-container-small image-compare">
 
                                 <div class="bal-after">
-                                    <img src="static/img/samples/playroom/ours/00002.png">
+                                    <img src="static/img/examples/bungee_pygs.svg">
                                     <div class="bal-afterPosition afterLabel" style="z-index:1;">
                                         Ours
                                     </div>
-                                    <div class="bal-afterPosition afterSize" style="z-index:1;">
+                                    <!-- <div class="bal-afterPosition afterSize" style="z-index:1;">
                                         22 MB
-                                    </div>
+                                    </div> -->
                                 </div>
 
                                 <div class="bal-before" style="width:96.4968152866242%;">
                                     <div class="bal-before-inset" style="width: 539px;">
-                                        <img src="static/img/samples/playroom/baseline/00002.png">
+                                        <img src="static/img/examples/bungee_bungeenerf.svg">
                                         <div class="bal-beforePosition beforeLabel">
-                                            3DGS
+                                            BungeeNeRF
                                         </div>
-                                        <div class="bal-beforePosition beforeSize">
+                                        <!-- <div class="bal-beforePosition beforeSize">
                                             602 MB
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
 
@@ -611,11 +471,25 @@
                                 </div>
 
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
+
+        <section class="section">
+            <div class="container is-max-desktop is-mobile">
+                <div class="is-centered" style="margin-bottom: 2rem;">
+                    <h2 class="title is-3" style="text-align: center;">Demo Video</h2>
+                </div>
+                <div class="item item-playroom">
+                    <video poster="" id="playroom" controls muted loop playsinline height="100%">
+                        <source src="./static/videos/demo_small.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
 
         <!-- <section class="section">
             <div class="container is-max-desktop">
