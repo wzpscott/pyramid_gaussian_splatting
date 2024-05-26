@@ -163,10 +163,10 @@
                 </div>
             </div>
         </section> -->
+        
 
-        <section class="section">
+        <!-- <section class="section">
             <div class="container is-max-desktop is-mobile">
-                <!-- Abstract. -->
                 <div class="columns is-centered">
                     <div class="column is-four-fifths">
                         <h2 class="title is-3">Abstract</h2>
@@ -187,8 +187,43 @@
                     </div>
                 </div>
             </div>
+        </section> -->
+        
+        <section class="section">
+            <div class="container is-max-desktop is-mobile">
+                <div class="is-centered" style="margin-bottom: 3rem;">
+                    <h2 class="title is-3">Demo Video</h2>
+                </div>
+                <div class="item item-playroom">
+                    <video poster="" id="playroom" autoplay controls muted loop playsinline height="100%">
+                        <source src="./static/videos/demo.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
         </section>
 
+        <section class="section">
+            <div class="container is-max-desktop is-mobile">
+                <div class="is-centered" style="margin-bottom: 3rem;">
+                    <h2 class="title is-3">Abstract</h2>
+                </div>
+                <p>
+                    Neural Radiance Fields (NeRFs) have demonstrated remarkable proficiency in synthesizing photorealistic images of large-scale scenes. 
+                    However, they are often plagued by a loss of fine details and long rendering durations.
+                    3D Gaussian Splatting has recently been introduced as a potent alternative, achieving both high-fidelity visual results and accelerated rendering performance. 
+                    Nonetheless, scaling 3D Gaussian Splatting is fraught with challenges.
+                    Specifically, large-scale scenes grapples with the integration of objects across multiple scales and disparate viewpoints, which often leads to compromised efficacy as the Gaussians need to balance between detail levels. 
+                    Furthermore, the generation of initialization points via COLMAP from large-scale dataset is both computationally demanding and prone to incomplete reconstructions.
+                    To address these challenges, we present <strong>Py</strong>ramidal 3D <strong>G</strong>aussian <strong>S</strong>platting (<strong>PyGS</strong>) with NeRF Initialization. 
+                    Our approach represent the scene with a hierarchical assembly of Gaussians arranged in a pyramidal fashion. 
+                    The top level of the pyramid is composed of a few large Gaussians, while each subsequent layer accommodates a denser collection of smaller Gaussians. 
+                    We effectively initialize these pyramidal Gaussians through sampling a rapidly trained grid-based NeRF at various frequencies.
+                    We group these pyramidal Gaussians into clusters and use a compact weighting network to dynamically determine the influence of each pyramid level of each cluster considering camera viewpoint during rendering.
+                    Our method achieves a significant performance leap across multiple large-scale datasets and attains a rendering time that is over 400 times faster than current state-of-the-art approaches.
+                </p>
+                </ul>
+            </div>
+        </section>
         
         <section class="section">
             <div class="container is-max-desktop is-mobile">
