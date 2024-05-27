@@ -7,23 +7,10 @@
     margin-right: auto;
     width: 70%;
   }
-.figcenter {
-display: block;
-margin-left: 20pt;
-margin-right: 20pt;
-}
 
-figure {
-    display: inline-block;
-    /* border: 1px dotted gray; */
-    margin: 20px; /* adjust as needed */
-}
-figure img {
-    vertical-align: top;
-}
-figure figcaption {
-    /* border: 1px dotted blue; */
-    text-align: center;
+.figcenter {
+    display: block;
+    margin: 20pt;
 }
 
 .bal-container-small {
