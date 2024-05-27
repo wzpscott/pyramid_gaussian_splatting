@@ -188,15 +188,12 @@
             </div>
         </section>
         
-        <section class="section">
+        <!-- <section class="section">
             <div class="container is-max-desktop is-mobile">
                 <div class="columns is-centered">
                     <div class="column is-four-fifths">
                         <h2 class="title is-3" style="text-align: center">Method</h2>
                         <div class="content has-text-justified">
-                        <!-- <div class="is-centered ">
-                            <img src="static/img/pipeline.svg" class="figcenter">
-                        </div> -->
                         <img src="static/img/pipeline.svg" class="figcenter">
                     PyGS parameterizes the scene using a hierarchical structure of 3D Gaussians, organized into pyramid levels that represent different levels of details.
                     The top level of the pyramid comprises a few large Gaussians that encapsulate general scene shape and structure, and the lower levels contain more smaller Gaussians that model finer scene details.
@@ -212,31 +209,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- <section class="section">
-            <div class="container is-max-desktop is-mobile">
-                <div class="is-centered" style="margin-bottom: 2rem;">
-                    <h2 class="title is-3">Method Overview</h2>
-                </div>
-                <div class="is-centered ">
-                    <img src="static/img/pipeline.svg" class="center">
-                </div>
-                <p>
-                    PyGS parameterizes the scene using a hierarchical structure of 3D Gaussians, organized into pyramid levels that represent different levels of details.
-                    The top level of the pyramid comprises a few large Gaussians that encapsulate general scene shape and structure, and the lower levels contain more smaller Gaussians that model finer scene details.
-                    We subsequently sample the grid-based NeRF to form a dense point cloud and generate several subsets of point clouds by sampling the dense one at multiple frequencies.
-                    These subsets of points serve as the initialization points for the respective levels of the proposed pyramidal Gaussian structure.
-                    When rendering an image, it is desirable to adaptively choose the contribution of each level based both on the camera viewpoint and the complexity of the rendered region.
-                    For example, when the camera is distant or the region is smooth and textureless, the higher-level Gaussians (i.e., fewer and larger Gaussians) should be prioritized. Conversely, when the camera is in close proximity or the region has complex geometry or textures, the lower levels (i.e., more smaller Gaussians) should come into play. 
-                    To more effectively capture the nuances of local geometry and texture, we introduce a learnable embedding for each cluster. 
-                    This embedding, along with the camera viewpoint, is input into the weighting network, which then computes the weights for the different pyramid levels associated with that cluster. 
-                    Consequently, Gaussians belonging to the same level and cluster are assigned the same weight.
-                    Additionally, we integrate an appearance embedding for each cluster and a color correction network to account for the intricate variations in lighting that can occur across viewpoints.
-                </p>
-                </ul>
-            </div>
         </section> -->
-
+    
         <section class="section">
             <div class="container is-max-desktop is-mobile">
                 
