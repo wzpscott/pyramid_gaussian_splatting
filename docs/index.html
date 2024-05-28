@@ -57,27 +57,23 @@
                             <h1 class="title is-1 is-size-3-mobile publication-title">PyGS: Large-scale Scene Representation with Pyramidal 3D Gaussian Splatting</h1>
                             <!-- <h2 class="subtitle is-4 opacity-1" style="margin-top: 1rem;opacity:0.7">CVPR 2024</h2> -->
                             <div class="is-size-5 publication-authors">
-                                <!-- <span class="author-block">
-                                    <a href="https://www.cs.cit.tum.de/en/cg/people/niedermayr/">Simon
-                                        Niedermayr</a>,</span>
-                                <span class="author-block">
-                                    <a href="https://www.cs.cit.tum.de/en/cg/people/alumni/stumpfegger/"> Josef
-                                        Stumpfegger</a>,</span> -->
                                 <span class="author-block">
                                     <a href="">Zipeng WANG</a>,</span>
                                 <span class="author-block">
-                                    <a href="https://www.danxurgb.net/"> Dan XU</span>
+                                    <a href="https://www.danxurgb.net/">Dan XU</span>
                             </div>
 
-                            <div class="is-size-5 publication-authors">
-                                <span class="author-block">HKUST</span>
-                            </div>
+                            <!-- <div class="is-size-5 publication-authors">
+                                <span class="author-block">The Hong Kong University of Science and Technology</span>
+                            </div> -->
+                            <h2 class="subtitle is-5 opacity-1" style="margin-top: 0rem;opacity:0.9">Department of Computer Science and Engineering <br> 
+                            The Hong Kong University of Science and Technology (HKUST)</h2>
 
                             <div class="column has-text-centered">
                                 <div class="publication-links">
                                     <!-- PDF Link. -->
                                     <span class="link-block">
-                                        <!-- <a href="https://arxiv.org/pdf/2401.02436.pdf" -->
+                                        <a href="https://arxiv.org/abs/2405.16829"
                                         <a href=""
                                             class="external-link button is-normal is-rounded is-dark">
                                             <span class="icon">
@@ -87,7 +83,7 @@
                                         </a>
                                     </span>
                                     <span class="link-block">
-                                        <!-- <a href="https://arxiv.org/abs/2401.02436" -->
+                                        <a href="https://arxiv.org/abs/2405.16829"
                                         <a href=""
                                             class="external-link button is-normal is-rounded is-dark">
                                             <span class="icon">
@@ -166,8 +162,22 @@
 
         <section class="section">
             <div class="container is-max-desktop is-mobile">
+                <div class="is-centered" style="margin-bottom: 2rem;">
+                    <h2 class="title is-3" style="text-align: center;">Demo Video</h2>
+                </div>
+                <center>
+                    <video id="demo" controls autoplay muted loop playsinline height="100%">
+                        <source src="./static/videos/demo_small.mp4" type="video/mp4">
+                    </video>
+                </center>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container is-max-desktop is-mobile">
                 <div class="columns is-centered">
-                    <div class="column is-four-fifths">
+                    <!-- <div class="column is-four-fifths"> -->
+                    <div class="column">
                         <h2 class="title is-3" style="text-align: center">Abstract</h2>
                         <div class="content has-text-justified">
                             Neural Radiance Fields (NeRFs) have demonstrated remarkable proficiency in synthesizing photorealistic images of large-scale scenes. 
@@ -181,20 +191,20 @@
                             The top level of the pyramid is composed of a few large Gaussians, while each subsequent layer accommodates a denser collection of smaller Gaussians. 
                             We effectively initialize these pyramidal Gaussians through sampling a rapidly trained grid-based NeRF at various frequencies.
                             We group these pyramidal Gaussians into clusters and use a compact weighting network to dynamically determine the influence of each pyramid level of each cluster considering camera viewpoint during rendering.
-                            Our method achieves a significant performance leap across multiple large-scale datasets and attains a rendering time that is over 400 times faster than current state-of-the-art approaches.
+                            Our method achieves a significant performance leap across multiple large-scale datasets and attains a rendering time over 400 times faster than current SoTA approaches.
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- <section class="section">
+        <section class="section">
             <div class="container is-max-desktop is-mobile">
                 <div class="columns is-centered">
-                    <div class="column is-four-fifths">
+                    <div class="column">
                         <h2 class="title is-3" style="text-align: center">Method</h2>
                         <div class="content has-text-justified">
-                        <img src="static/img/pipeline.svg" class="figcenter">
+                    <img src="static/img/pipeline.svg" width="100%" class="figcenter">
                     PyGS parameterizes the scene using a hierarchical structure of 3D Gaussians, organized into pyramid levels that represent different levels of details.
                     The top level of the pyramid comprises a few large Gaussians that encapsulate general scene shape and structure, and the lower levels contain more smaller Gaussians that model finer scene details.
                     We subsequently sample the grid-based NeRF to form a dense point cloud and generate several subsets of point clouds by sampling the dense one at multiple frequencies.
@@ -209,7 +219,7 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
     
         <section class="section">
             <div class="container is-max-desktop is-mobile">
@@ -217,8 +227,46 @@
                 <div class="is-centered" style="margin-bottom: 1rem;">
                     <h2 class="title is-3" style="text-align: center;">Results</h2>
                 </div>
-
-                <div class="is-centered ">
+                
+                <!-- <figure>
+                    <img src="static/img/mill19.png" style="width: 55%;"  class="center">
+                    <figcaption>Results on Mill19 and Urbanscene dataset.</figcaption>
+                </figure> -->
+                
+                <center>
+                <table>
+                    <tr>
+                        <td>
+                            <figure>
+                                <img src="static/img/urbanscene.png" style="width: 100%; margin-left: 0pt;" class="center">
+                                <figcaption>Results on Urbanscene dataset.</figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <figure>
+                                <img src="static/img/mill19.png" style="width: 100%; margin-right: 0pt" class="center" >
+                                <figcaption>Results on Mill19 dataset.</figcaption>
+                            </figure>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <figure>
+                                <img src="static/img/matrix_city.png" style="width: 100%; margin-left: 0pt;" class="center">
+                                <figcaption>Results on MatrixCity dataset.</figcaption>
+                            </figure>
+                        </td>
+                        <td>
+                            <figure>
+                                <img src="static/img/bungeenerf.png" style="width: 100%; margin-right: 0pt;" class="center">
+                                <figcaption>Results on BungeeNeRF dataset.</figcaption>
+                            </figure>
+                        </td>
+                    </tr>
+                </table>
+                </center>
+                    
+                <!-- <div class="is-centered ">
                     <figure>
                         <img src="static/img/mill19.png" style="width: 60%;"  class="center">
                         <figcaption>Results on Mill19 and Urbanscene dataset.</figcaption>
@@ -227,7 +275,7 @@
 
                 <div class="is-centered ">
                     <figure>
-                        <img src="static/img/matrix_city.png" style="width: 60%;"  class="center">
+                        <img src="static/img/matrix_city.png" style="width: 30%;"  class="center">
                         <figcaption>Results on MatrixCity dataset.</figcaption>
                     </figure>
                 </div>
@@ -237,7 +285,7 @@
                         <img src="static/img/bungeenerf.png" style="width: 55%;"  class="center">
                         <figcaption>Results on BungeeNeRF dataset.</figcaption>
                     </figure>
-                </div>
+                </div> -->
 
             </div>
         </section>
@@ -335,7 +383,7 @@
                                     <div class="bal-before-inset" style="width: 539px;">
                                         <img src="static/img/examples/sciart_meganerf.png">
                                         <div class="bal-beforePosition beforeLabel">
-                                            3DGS
+                                            MegaNeRF
                                         </div>
                                         <!-- <div class="bal-beforePosition beforeSize">
                                             1.4 GB
@@ -477,19 +525,6 @@
             </div>
         </section>
 
-        <section class="section">
-            <div class="container is-max-desktop is-mobile">
-                <div class="is-centered" style="margin-bottom: 2rem;">
-                    <h2 class="title is-3" style="text-align: center;">Demo Video</h2>
-                </div>
-                <div class="item item-playroom">
-                    <video poster="" id="playroom" controls muted loop playsinline height="100%">
-                        <source src="./static/videos/demo_small.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-        </section>
-
         <!-- <section class="section">
             <div class="container is-max-desktop">
 
@@ -529,8 +564,8 @@
                 <pre><code>@misc{wang2024pygs,
         title={PyGS: Large-scale Scene Representation with Pyramidal 3D Gaussian Splatting}, 
         author={Zipeng Wang and Dan Xu},
-        year={20234},
-        eprint={2401.xxxx},
+        year={2024},
+        eprint={2405.16829},
         archivePrefix={arXiv},
         primaryClass={cs.CV}
 }</code></pre>
